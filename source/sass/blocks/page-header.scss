@@ -1,0 +1,27 @@
+.page-header {
+position: absolute;
+width: 100%;
+top: 0;
+left: 0;
+}
+
+.page-header::after {
+  content: "";
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-blue;
+}
+
+.page-header__navigation {
+  @include vp-1023 {
+    padding-right: 15px;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+  }
+}

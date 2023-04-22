@@ -1,0 +1,137 @@
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  padding-top: 44px;
+  padding-left: 48px;
+  padding-right: 48px;
+  background-color: $color-dark-blue;
+
+  @include vp-1023 {
+    padding-bottom: 50px;
+    padding-top: 44px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 90%;
+    align-items: center;
+  }
+
+  @media (min-width: 601px) and (max-width: 767px) {
+    width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding-top: 35px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+}
+
+.booking-form p {
+  margin: 0;
+  margin-bottom: 29px;
+  font-weight: 500;
+  color: $color-white;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+}
+
+.booking-form label {
+  width: 100%;
+}
+
+.booking-form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+  width: 100%;
+  margin-bottom: 24px;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.booking-form__input-wrapper input {
+  min-width: 303px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 16px;
+  color: rgba(1, 28, 64, 0.7);
+  background-color: $color-white;
+  border: none;
+  outline: none;
+  caret-color: $color-dark-blue;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-1023 {
+    min-width: 230px;
+  }
+}
+
+.booking-form input::placeholder {
+  color: rgba(1, 28, 64, 0.7);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.booking-form__input-wrapper label {
+  width: 100%;
+}
+
+.booking-form__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-bottom: 28px;
+  }
+}
+
+.booking-form__checkbox-wrapper span {
+  flex-shrink: 0;
+  color: $color-white;
+  font-size: 10px;
+  line-height: 13px;
+
+  @include vp-767 {
+    flex-shrink: 1;
+  }
+}
+
+.booking-form__checkbox-wrapper input {
+  width: 18px;
+  height: 18px;
+  background-color: $color-white;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}
+
+.booking-form__checkbox-wrapper br {
+  display: none;
+
+  @media (max-width: 340px) {
+    display: block;
+  }
+}

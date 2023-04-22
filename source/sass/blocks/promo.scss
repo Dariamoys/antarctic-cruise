@@ -12,6 +12,7 @@
     padding-bottom: 92px;
   }
 }
+
 .promo-wrapper {
   display: flex;
   gap: 92px;
@@ -57,7 +58,7 @@
     padding-right: 57px;
     margin-bottom: 19px;
     font-size: 26px;
-    line-height: 36px
+    line-height: 36px;
   }
 
   @include vp-767 {

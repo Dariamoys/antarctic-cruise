@@ -1,0 +1,119 @@
+.card {
+  position: relative;
+  min-height: 386px;
+  max-width: 260px;
+
+  @include vp-1279 {
+    max-width: 100%;
+  }
+
+  @include vp-1023 {
+    min-width: 308px;
+  }
+
+  @include vp-1023 {
+    min-width: 270px;
+  }
+}
+
+.card__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 386px;
+  background-color: $color-dark-blue;
+  padding-top: 28px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+  width: 100%;
+  height: 100%;
+
+  @include vp-1023 {
+    padding: 35px;
+    padding-top: 30px;
+  }
+
+  @include vp-767 {
+    padding: 31px 25px;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__image-wrapper {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.card h4 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-white;
+}
+
+.card__info-list {
+  flex-grow: 1;
+  margin: 0;
+  margin-bottom: 5px;
+  color: $color-white;
+}
+
+.card__image-wrapper h4 {
+  position: absolute;
+  content: "";
+  left: 34px;
+  bottom: 12px;
+
+  @include vp-1023 {
+    left: 35px;
+    bottom: 16px;
+  }
+
+  @include vp-767 {
+    left: 24px;
+    bottom: 7px;
+  }
+}
+
+.card:hover .card__image-wrapper {
+  opacity: 0;
+  z-index: -5;
+}
+
+.card__termin {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__description:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.card__link {
+  align-self: center;
+  padding: 10px;
+  background-color: $color-white;
+  color: $color-dark-blue;
+}

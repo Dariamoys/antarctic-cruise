@@ -13,6 +13,14 @@
   }
 }
 
+.site-list--footer {
+  @include vp-767 {
+    flex-direction: column;
+    align-items: self-start;
+    gap: 8px;
+  }
+}
+
 .site-list__link {
   font-weight: 500;
   font-size: 16px;
@@ -21,5 +29,12 @@
   @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
+  }
+}
+
+.site-list__link--footer {
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
   }
 }

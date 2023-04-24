@@ -12,9 +12,20 @@
 }
 
 .social-list__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 25px;
   height: 25px;
+
+  @include hover {
+    opacity: 0.8;
+  }
+}
+
+.social-list__link:focus-visible {
+  border: none;
+  outline: 2px solid $color-white;
 }
 
 .social-list__icon {

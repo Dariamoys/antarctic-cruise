@@ -17,34 +17,34 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="page-header">
+      <header class="page-header page-header--nojs" data-header data-close-menu>
         <div class="container">
-			<nav class="page-header__navigation main-navigation main-navigation--closed">
-        <div class="main-navigation__wrapper">
-				<a class="main-navigation__logo-link" href="index.html" aria-label="Главная страница">
-          <svg class="main-navigation__logo logo" viewBox="0 0 70 38" aria-hidden="true" width="70" height="38">
-            <use xlink:href="img/sprite.svg#logo"></use>
-          </svg>
-				</a>
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-				<ul class="main-navigation__list site-list">
-					<li class="site-list__item">
-						<a class="site-list__link" href="#">Преимущества</a>
-					</li>
-					<li class="site-list__item">
-						<a class="site-list__link" href="#">Направления</a>
-					</li>
-					<li class="site-list__item">
-						<a class="site-list__link" href="#">Ближайшие круизы</a>
-					</li>
-					<li class="site-list__item">
-						<a class="site-list__link" href="#">Контакты</a>
-					</li>
-				</ul>
-			</nav>
+          <nav class="page-header__navigation main-navigation">
+            <div class="main-navigation__wrapper">
+              <a class="main-navigation__logo-link" href="index.html" aria-label="Главная страница">
+                <svg class="main-navigation__logo logo" viewBox="0 0 70 38" aria-hidden="true" width="70" height="38">
+                  <use xlink:href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button class="main-navigation__toggle" type="button" data-burger>
+            <span class="visually-hidden">Открыть меню</span>
+              </button>
+            </div>
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#advantages" data-close-menu>Преимущества</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#" data-close-menu>Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#catalog" data-close-menu>Ближайшие круизы</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#contacts" data-close-menu>Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
       <main>
@@ -67,20 +67,20 @@
         <section class="promo">
           <div class="container">
             <div class="promo-wrapper">
-            <div class="promo__content-wrapper">
-              <h2>Путешествие на&nbsp;край Земли</h2>
-              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+              <div class="promo__content-wrapper">
+                <h2>Путешествие на&nbsp;край Земли</h2>
+                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/promo-mobile.webp 1x, img/images/retina/promo-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/promo-tablet.webp 1x, img/images/retina/promo-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/images/desktop/promo-desktop.webp 1x, img/images/retina/promo-desktop@2x.webp 2x">
+                <img src="img/images/desktop/promo-desktop.jpg" srcset="img/images/retina/promo-desktop@2x.jpg" alt="Пингвины на льдине" width="560" height="301" loading="lazy">
+              </picture>
             </div>
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/promo-mobile.webp 1x, img/images/retina/promo-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/promo-tablet.webp 1x, img/images/retina/promo-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/desktop/promo-desktop.webp 1x, img/images/retina/promo-desktop@2x.webp 2x">
-              <img src="img/images/desktop/promo-desktop.jpg" srcset="img/images/retina/promo-desktop@2x.jpg" alt="Пингвины на льдине" width="560" height="301">
-            </picture>
-          </div>
           </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
           <div class="container">
             <h2>Преимущества</h2>
             <ul class="advantages__list">
@@ -107,25 +107,25 @@
               </li>
             </ul>
           </div>
-          <div class="advantages__image-wrapper">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/advantages-bg-mobile.webp 1x, img/images/retina/advantages-bg-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/advantages-bg-tablet.webp 1x, img/images/retina/advantages-bg-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/desktop/advantages-bg-desktop.webp 1x, img/images/retina/advantages-bg-desktop@2x.webp 2x">
-              <img src="img/images/desktop/advantages-bg-desktop.jpg" srcset="img/images/retina/advantages-bg-desktop@2x.jpg" alt="" width="560" height="301">
-            </picture>
-          </div>
+            <div class="advantages__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/advantages-bg-mobile.webp 1x, img/images/retina/advantages-bg-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/advantages-bg-tablet.webp 1x, img/images/retina/advantages-bg-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/images/desktop/advantages-bg-desktop.webp 1x, img/images/retina/advantages-bg-desktop@2x.webp 2x">
+                <img src="img/images/desktop/advantages-bg-desktop.jpg" srcset="img/images/retina/advantages-bg-desktop@2x.jpg" alt="" width="560" height="301">
+              </picture>
+            </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <div class="container">
             <h3>Ближайшие круизы</h3>
             <ul class="catalog__list">
-              <li class="catalog__item card">
+              <li class="catalog__item card" tabindex="0">
                   <div class="card__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card1-mobile.webp 1x, img/images/retina/card1-mobile@2x.webp 2x">
                       <source type="image/webp" srcset="img/images/desktop/card1-desktop-tablet.webp 1x, img/images/retina/card1-desktop-tablet@2x.webp 2x">
-                      <img src="img/images/desktop/card1-desktop-tablet.jpg" srcset="img/images/retina/card1-desktop-tablet@2x.jpg" alt="">
+                      <img src="img/images/desktop/card1-desktop-tablet.jpg" srcset="img/images/retina/card1-desktop-tablet@2x.jpg" alt="" loading="lazy">
                     </picture>
                   <h4>Круиз "Астория"</h4>
                   </div>
@@ -144,12 +144,12 @@
                     <a class= "card__link btn" href="#">Забронировать</a>
                   </div>
               </li>
-              <li class="catalog__item card">
+              <li class="catalog__item card" tabindex="0">
                 <div class="card__image-wrapper">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card1-mobile.webp 1x, img/images/retina/card1-mobile@2x.webp 2x">
                     <source type="image/webp" srcset="img/images/desktop/card1-desktop-tablet.webp 1x, img/images/retina/card1-desktop-tablet@2x.webp 2x">
-                    <img src="img/images/desktop/card1-desktop-tablet.jpg" srcset="img/images/retina/card1-desktop-tablet@2x.jpg" alt="">
+                    <img src="img/images/desktop/card1-desktop-tablet.jpg" srcset="img/images/retina/card1-desktop-tablet@2x.jpg" alt="" loading="lazy">
                   </picture>
                 <h4>Круиз "Элайн"</h4>
                 </div>
@@ -168,12 +168,12 @@
                   <a class= "card__link btn" href="#">Забронировать</a>
                 </div>
             </li>
-            <li class="catalog__item card">
+            <li class="catalog__item card" tabindex="0">
               <div class="card__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card3-mobile.webp 1x, img/images/retina/card3-mobile@2x.webp 2x">
                   <source type="image/webp" srcset="img/images/desktop/card3-desktop-tablet.webp 1x, img/images/retina/card3-desktop-tablet@2x.webp 2x">
-                  <img src="img/images/desktop/card3-desktop-tablet.jpg" srcset="img/images/retina/card3-desktop-tablet@2x.jpg" alt>
+                  <img src="img/images/desktop/card3-desktop-tablet.jpg" srcset="img/images/retina/card3-desktop-tablet@2x.jpg" alt="" loading="lazy">
                 </picture>
               <h4>Круиз "Атлантис"</h4>
               </div>
@@ -192,12 +192,12 @@
                 <a class= "card__link btn" href="#">Забронировать</a>
               </div>
           </li>
-          <li class="catalog__item card">
+          <li class="catalog__item card" tabindex="0">
             <div class="card__image-wrapper">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card4-mobile.webp 1x, img/images/retina/card4-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/images/desktop/card4-desktop-tablet.webp 1x, img/images/retina/card4-desktop-tablet@2x.webp 2x">
-                <img src="img/images/desktop/card4-desktop-tablet.jpg" srcset="img/images/retina/card4-desktop-tablet@2x.jpg" alt="">
+                <img src="img/images/desktop/card4-desktop-tablet.jpg" srcset="img/images/retina/card4-desktop-tablet@2x.jpg" alt="" loading="lazy">
               </picture>
             <h4>Круиз "Одиссей"</h4>
             </div>
@@ -216,12 +216,12 @@
               <a class= "card__link btn" href="#">Забронировать</a>
             </div>
         </li>
-          <li class="catalog__item card">
+          <li class="catalog__item card" tabindex="0">
                   <div class="card__image-wrapper">
                     <picture>
                       <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card5-mobile.webp 1x, img/images/retina/card5-mobile@2x.webp 2x">
                       <source type="image/webp" srcset="img/images/desktop/card5-desktop-tablet.webp 1x, img/images/retina/card5-desktop-tablet@2x.webp 2x">
-                      <img src="img/images/desktop/card5-desktop-tablet.jpg" srcset="img/images/retina/card5-desktop-tablet@2x.jpg" alt="">
+                      <img src="img/images/desktop/card5-desktop-tablet.jpg" srcset="img/images/retina/card5-desktop-tablet@2x.jpg" alt="" loading="lazy">
                     </picture>
                   <h4>Круиз "Олимпия"</h4>
                   </div>
@@ -240,12 +240,12 @@
                     <a class= "card__link btn" href="#">Забронировать</a>
                   </div>
               </li>
-              <li class="catalog__item card">
+              <li class="catalog__item card" tabindex="0">
                 <div class="card__image-wrapper">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card6-mobile.webp 1x, img/images/retina/card6-mobile@2x.webp 2x">
                     <source type="image/webp" srcset="img/images/desktop/card6-desktop-tablet.webp 1x, img/images/retina/card6-desktop-tablet@2x.webp 2x">
-                    <img src="img/images/desktop/card6-desktop-tablet.jpg" srcset="img/images/retina/card6-desktop-tablet@2x.jpg" alt="">
+                    <img src="img/images/desktop/card6-desktop-tablet.jpg" srcset="img/images/retina/card6-desktop-tablet@2x.jpg" alt="" loading="lazy">
                   </picture>
                 <h4>Круиз "Аврора"</h4>
                 </div>
@@ -264,12 +264,12 @@
                   <a class= "card__link btn" href="#">Забронировать</a>
                 </div>
             </li>
-            <li class="catalog__item card">
+            <li class="catalog__item card" tabindex="0">
               <div class="card__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card7-mobile.webp 1x, img/images/retina/card7-mobile@2x.webp 2x">
                   <source type="image/webp" srcset="img/images/desktop/card7-desktop-tablet.webp 1x, img/images/retina/card7-desktop-tablet@2x.webp 2x">
-                  <img src="img/images/desktop/card7-desktop-tablet.jpg" srcset="img/images/retina/card7-desktop-tablet@2x.jpg" alt="">
+                  <img src="img/images/desktop/card7-desktop-tablet.jpg" srcset="img/images/retina/card7-desktop-tablet@2x.jpg" alt="" loading="lazy">
                 </picture>
               <h4>Круиз "Леонор"</h4>
               </div>
@@ -288,12 +288,12 @@
                 <a class= "card__link btn" href="#">Забронировать</a>
               </div>
           </li>
-          <li class="catalog__item card">
+          <li class="catalog__item card" tabindex="0">
             <div class="card__image-wrapper">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/card8-mobile.webp 1x, img/images/retina/card8-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/images/desktop/card8-desktop-tablet.webp 1x, img/images/retina/card8-desktop-tablet@2x.webp 2x">
-                <img src="img/images/desktop/card8-desktop-tablet.jpg" srcset="img/images/retina/card8-desktop-tablet@2x.jpg" alt="">
+                <img src="img/images/desktop/card8-desktop-tablet.jpg" srcset="img/images/retina/card8-desktop-tablet@2x.jpg" alt="" loading="lazy">
               </picture>
             <h4>Круиз "Минион - 1"</h4>
             </div>
@@ -317,71 +317,71 @@
         </section>
         <section class="booking">
           <div class="container">
-            <div class="booking__wrapper">
-          <h4 class="visually-hidden">Форма бронированирования круиза</h4>
-          <div class="booking__content-wrapper">
-            <h4>Раннее бронирование</h4>
-            <p>Забронируйте тур <br class="booking__mobile"> за&nbsp;3-6 месяцев <br> до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            <div class="booking__wrapper" data-form-validate data-callback="base">
+              <h4 class="visually-hidden">Форма бронированирования круиза</h4>
+              <div class="booking__content-wrapper">
+                <h4>Раннее бронирование</h4>
+                <p>Забронируйте тур <br class="booking__mobile"> за&nbsp;3-6 месяцев <br> до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+              </div>
+              <form class="booking__form booking-form" action="https://echo.htmlacademy.ru/" method="post">
+                <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+                <div class="booking-form__input-wrapper">
+                  <label for="name" data-required data-validate-type="text" data-limitation="name" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
+                    <input class="booking-form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Укажите ваше имя" autocomplete="off" required data-focus pattern="^[A-Za-zА-Яа-яЁё\- ]+$">
+                  </label>
+                  <label for="phone" data-required data-validate-type="phone" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
+                    <input class="booking-form__input" type="tel" name="tel" id="phone" placeholder="Телефон" aria-label="Укажите ваш номер телефона" required  autocomplete="off" pattern="^\+?[\d ()-]+$">
+                  </label>
+                  <label for="email" data-required data-validate-type="email" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
+                    <input class="booking-form__input" type="email" name="email" id="email" placeholder="Email" aria-label="Укажите ваш email" autocomplete="off" required data-focus pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                  </label>
+                </div>
+                <label class="booking-form__checkbox-wrapper" for="approval" data-required data-validate-type="checkbox" data-message-base="Обязательное поле">
+                  <input class="booking-form__checkbox" type="checkbox" name="approval" id="approval" aria-label="Согласие на обработку персональных данных">
+                  <span>Я&nbsp;согласен на&nbsp;обработку <br> моих персональных данных</span>
+                </label>
+                <button class="booking-form__button btn" type="submit">Оставить заявку</button>
+              </form>
+              <div class="booking__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/form-image-mobile.webp 1x, img/images/retina/form-image-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/form-image-tablet.webp 1x, img/images/retina/form-image-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/images/desktop/form-image-desktop.webp 1x, img/images/retina/form-image-desktop@2x.webp 2x">
+                  <img src="img/images/desktop/form-image-desktop.jpg" srcset="img/images/retina/form-image-desktop@2x.jpg" alt="" loading="lazy">
+                </picture>
+              </div>
+            </div>
           </div>
-          <form class="booking__form booking-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
-            <div class="booking-form__input-wrapper">
-            <label for="name" data-required data-validate-type="text" data-limitation="name" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
-              <input class="booking-form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Укажите ваше имя" autocomplete="off" required data-focus>
-            </label>
-            <label for="phone" data-required data-validate-type="phone" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
-              <input class="booking-form__input" type="tel" name="tel" id="phone" placeholder="Телефон" aria-label="Укажите ваш номер телефона" required  autocomplete="off">
-            </label>
-            <label for="email" data-required data-validate-type="text" data-limitation="email" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
-              <input class="booking-form__input" type="email" name="email" id="email" placeholder="Email" aria-label="Укажите ваш email" autocomplete="off" required data-focus>
-            </label>
-          </div>
-            <label class="booking-form__checkbox-wrapper" for="approval" data-required data-validate-type="checkbox" data-message-base="Обязательное поле">
-              <input class="booking-form__checkbox" type="checkbox" name="approval" id="approval" aria-label="Согласие на обработку персональных данных">
-              <span>Я&nbsp;согласен на&nbsp;обработку <br> моих персональных данных</span>
-            </label>
-            <button class="booking-form__button btn" type="submit">Оставить заявку</button>
-          </form>
-          <div class="booking__image-wrapper">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/form-image-mobile.webp 1x, img/images/retina/form-image-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/form-image-tablet.webp 1x, img/images/retina/form-image-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/desktop/form-image-desktop.webp 1x, img/images/retina/form-image-desktop@2x.webp 2x">
-              <img src="img/images/desktop/form-image-desktop.jpg" srcset="img/images/retina/form-image-desktop@2x.jpg" alt="">
-            </picture>
-          </div>
-        </div>
-        </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <h4 class="visually-hidden">Контакты</h4>
           <div class="container">
             <div class="contacts__wrapper">
-          <div id="map" class="contacts__map map">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/map-mobile.webp 1x, img/images/retina/map-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/map-tablet.webp 1x, img/images/retina/map-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/images/desktop/map-desktop.webp 1x, img/images/retina/map-desktop@2x.webp 2x">
-              <img src="img/images/desktop/map-desktop.jpg" srcset="img/images/retina/map-desktop@2x.jpg" alt="Карта" width="560" height="306">
-            </picture>
+              <div id="map" class="contacts__map map">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/images/mobile/map-mobile.webp 1x, img/images/retina/map-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/images/tablet/map-tablet.webp 1x, img/images/retina/map-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/images/desktop/map-desktop.webp 1x, img/images/retina/map-desktop@2x.webp 2x">
+                  <img src="img/images/desktop/map-desktop.jpg" srcset="img/images/retina/map-desktop@2x.jpg" alt="Карта" width="560" height="306" loading="lazy">
+                </picture>
+              </div>
+              <div class="contacts__text-content">
+                <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+                <address class="contacts__address">
+                  <svg class="contacts__icon" viewBox="0 0 18 22" aria-hidden="true" focusable="false" width="18" height="22">
+                    <use xlink:href="img/sprite.svg#address-mark"></use>
+                  </svg>
+                  <span>г.&nbsp;Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8</span>
+                </address>
+                <a class="contacts__link" href="tel:+78002000000" aria-label="Позвонить в агенство Круизы в Антарктику">
+                  <svg class="contacts__icon" viewBox="0 0 18 18" aria-hidden="true" focusable="false" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  <span>8-800-200-00-00</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="contacts__text-content">
-            <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
-            <address class="contacts__address">
-              <svg class="contacts__icon" viewBox="0 0 18 22" aria-hidden="true" focusable="false" width="18" height="22">
-                <use xlink:href="img/sprite.svg#address-mark"></use>
-              </svg>
-              <span>г.&nbsp;Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8</span>
-            </address>
-            <a class="contacts__link" href="tel:+78002000000" aria-label="Позвонить в агенство Круизы в Антарктику">
-              <svg class="contacts__icon" viewBox="0 0 18 18" aria-hidden="true" focusable="false" width="18" height="18">
-                <use xlink:href="img/sprite.svg#phone"></use>
-              </svg>
-              <span>8-800-200-00-00</span>
-            </a>
-          </div>
-        </div>
-        </div>
         </section>
       </main>
       <footer class="page-footer">
@@ -394,16 +394,16 @@
             </a>
             <ul class="page-footer__list site-list site-list--footer">
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--footer" href="#">Преимущества</a>
+                <a class="site-list__link site-list__link--footer" href="#advantages">Преимущества</a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__link site-list__link--footer" href="#">Направления</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--footer" href="#">Ближайшие круизы</a>
+                <a class="site-list__link site-list__link--footer" href="#catalog">Ближайшие круизы</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link site-list__link--footer" href="#">Контакты</a>
+                <a class="site-list__link site-list__link--footer" href="#contacts">Контакты</a>
               </li>
             </ul>
             <ul class="page-footer__social-list social-list">
@@ -433,36 +433,7 @@
         </div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <script src="https://api-maps.yandex.ru/3.0/?apikey=<1cc2cab0-bb47-4a0c-8a7e-befab8a7ee45>&lang=ru_RU"></script>
+    <!-- <script src="https://api-maps.yandex.ru/3.0/?apikey=<ваш код>&lang=ru_RU"></script> -->
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

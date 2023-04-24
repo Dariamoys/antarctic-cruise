@@ -2,14 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 33px;
+  gap: 22px;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style-type: none;
 
   @include vp-1023 {
-    gap: 23px;
+    gap: 14px;
+    padding-right: 5px;
   }
 }
 
@@ -22,6 +23,7 @@
 }
 
 .site-list__link {
+  padding: 5px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -29,6 +31,15 @@
   @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
+    border: none;
+    outline: 2px solid $color-white;
   }
 }
 

@@ -93,6 +93,11 @@
   z-index: -5;
 }
 
+.card:focus-within .card__image-wrapper {
+  opacity: 0;
+  z-index: -5;
+}
+
 .card__termin {
   margin-bottom: 0;
   font-weight: 500;

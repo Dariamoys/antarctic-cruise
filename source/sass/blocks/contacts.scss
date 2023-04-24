@@ -93,8 +93,19 @@
 
 .contacts__link {
   display: flex;
+  flex-basis: content;
   gap: 10px;
   color: $color-dark-blue;
+
+  @include hover-focus {
+    outline: none;
+    opacity: 0.8;
+  }
+}
+
+.contacts__link:hover .contacts__icon,
+.contacts__link:focus .contacts__icon{
+  opacity: 0.8;
 }
 
 .contacts__icon {

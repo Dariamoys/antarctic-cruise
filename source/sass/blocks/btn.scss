@@ -18,7 +18,12 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  @include hover {
     opacity: 0.8;
+  }
+
+  @include focus {
+    border: none;
+    outline: 2px solid $color-white;
   }
 }

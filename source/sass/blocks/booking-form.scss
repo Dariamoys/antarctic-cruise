@@ -49,6 +49,7 @@
 
 .booking-form label {
   width: 100%;
+  position: relative;
 }
 
 .booking-form input:hover {
@@ -134,6 +135,31 @@
     height: 20px;
     flex-shrink: 0;
   }
+}
+
+.booking-form__checkbox-wrapper input::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: $color-transparent;
+  border-radius: 2px;
+  appearance: none;
+  opacity: 0;
+}
+
+.booking-form__checkbox-wrapper input:checked::after {
+  top: 4px;
+  left: 5px;
+  width: 7px;
+  height: 5px;
+  border-color: $color-dark-blue;
+  border-radius: 0;
+  border-top-style: none;
+  border-right-style: none;
+  border-width: 1.5px;
+  transform: rotate(-45deg);
+  opacity: 1;
 }
 
 .booking-form__checkbox-wrapper br {

@@ -56,14 +56,14 @@
 
 .main-navigation__toggle::before {
   @include vp-767 {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 6px;
-  width: 24px;
-  height: 2px;
-  background-color: $color-white;
-  box-shadow: 0 4px 0 0 $color-white, 0 8px 0 0 $color-white;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 24px;
+    height: 2px;
+    background-color: $color-white;
+    box-shadow: 0 4px 0 0 $color-white, 0 8px 0 0 $color-white;
   }
 }
 

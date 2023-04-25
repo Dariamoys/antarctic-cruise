@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/burger/burger';
+import {initMap} from './modules/map';
 
 
 // ---------------------------------
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   const burger = new Burger();
   burger.init();
+  initMap();
 
   // Modules
   // ---------------------------------

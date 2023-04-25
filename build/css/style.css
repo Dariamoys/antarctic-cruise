@@ -1152,6 +1152,7 @@ button,
 
 .booking-form label {
   width: 100%;
+  position: relative;
 }
 
 .booking-form input:hover {
@@ -1253,6 +1254,35 @@ button,
   width: 18px;
   height: 18px;
   background-color: #f9fbfd;
+}
+
+.booking-form__checkbox-wrapper input::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+}
+
+.booking-form__checkbox-wrapper input:checked::after {
+  top: 4px;
+  left: 5px;
+  width: 7px;
+  height: 5px;
+  border-color: #011c40;
+  border-radius: 0;
+  border-top-style: none;
+  border-right-style: none;
+  border-width: 1.5px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  opacity: 1;
 }
 
 .booking-form__checkbox-wrapper br {
@@ -1381,6 +1411,22 @@ button,
   flex-shrink: 0;
 }
 
+.map {
+  position: relative;
+  width: 100%;
+  height: 306px;
+}
+
+.map img {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+}
+
 .page-footer {
   padding-top: 50px;
   padding-bottom: 46px;
@@ -1442,46 +1488,9 @@ button,
   height: 16px;
 }
 
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
+.intro a {
+  color: #011c40;
+}
 
 @media (max-width: 1279px) {
   .catalog__list {
@@ -1741,6 +1750,10 @@ button,
 
   .contacts__address {
     padding-right: 42px;
+  }
+
+  .map {
+    height: 315px;
   }
 
   .page-footer__wrapper {
@@ -2107,6 +2120,7 @@ button,
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+    height: 316px;
   }
 
   .page-footer {

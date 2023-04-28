@@ -59,7 +59,8 @@
   }
 
   @include vp-767 {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+    justify-content: center;
     row-gap: 30px;
     padding: 0;
   }

@@ -1125,7 +1125,7 @@ button,
   object-fit: cover;
 }
 
-.booking-form {
+.booking-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1641,10 +1641,6 @@ button,
     min-width: 308px;
   }
 
-  .card {
-    min-width: 270px;
-  }
-
   .card__content-wrapper {
     padding: 35px;
     padding-top: 30px;
@@ -1692,11 +1688,15 @@ button,
   }
 
   .booking-form {
+    padding-left: 25px;
+  }
+
+  .booking-form form {
     padding-bottom: 50px;
     padding-top: 44px;
     padding-left: 50px;
     padding-right: 50px;
-    width: 90%;
+    width: 95%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2015,10 +2015,18 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     row-gap: 30px;
     padding: 0;
+  }
+
+  .card {
+    min-width: 270px;
+    max-width: 380px;
   }
 
   .card__content-wrapper {
@@ -2059,6 +2067,19 @@ button,
 
   .booking__content-wrapper br {
     display: none;
+  }
+
+  .booking-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
   }
 
   .booking-form p {
@@ -2155,7 +2176,7 @@ button,
     display: block;
   }
 
-  .booking-form {
+  .booking-form form {
     width: 100%;
     padding-top: 35px;
     padding-left: 29px;
@@ -2170,7 +2191,7 @@ button,
 }
 
 @media (min-width: 601px) and (max-width: 767px) {
-  .booking-form {
+  .booking-form form {
     width: 80%;
   }
 }

@@ -1,4 +1,17 @@
 .booking-form {
+  @include vp-1023 {
+    padding-left: 25px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+
+.booking-form form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -13,7 +26,7 @@
     padding-top: 44px;
     padding-left: 50px;
     padding-right: 50px;
-    width: 90%;
+    width: 95%;
     align-items: center;
   }
 

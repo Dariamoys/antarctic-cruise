@@ -41,19 +41,24 @@
 }
 
 .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card__image-wrapper {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   opacity: 1;
+}
+
+.card__image-wrapper::before {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-blue;
+  position: absolute;
 }
 
 .card h4 {
@@ -89,9 +94,18 @@
   }
 }
 
-.card:hover .card__image-wrapper {
+.card:hover .card__image-wrapper,
+.card:hover .card__image-wrapper img {
   opacity: 0;
+}
+
+.card:hover .card__image-wrapper img {
   z-index: -5;
+}
+
+.card:hover .card__link {
+  position: relative;
+  z-index: 5;
 }
 
 .card:focus-within .card__image-wrapper {

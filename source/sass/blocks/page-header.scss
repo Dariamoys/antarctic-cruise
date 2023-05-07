@@ -5,16 +5,16 @@
   left: 0;
 }
 
-.page-header::after {
-  content: "";
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $color-dark-blue;
-}
+// .page-header::after {
+//   content: "";
+//   position: absolute;
+//   z-index: -100;
+//   top: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: $color-dark-blue;
+// }
 
 .page-header.is-open .page-header__navigation,
 .page-header.page-header--nojs .page-header__navigation {
@@ -103,4 +103,13 @@
   @include vp-767 {
     margin-bottom: 39px;
   }
+}
+
+.page-header.is-open::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 43, 102, 0.5);
 }

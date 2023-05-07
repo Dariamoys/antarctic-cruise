@@ -386,9 +386,9 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/montserrat-bold.woff2") format("woff2"), url("../../fonts/montserrat-bold.woff") format("woff");
+  src: url("../fonts/montserrat-bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -396,7 +396,7 @@ template {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/montserrat-regular.woff2") format("woff2"), url("../../fonts/montserrat-regular.woff") format("woff");
+  src: url("../fonts/montserrat-regular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -404,7 +404,7 @@ template {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  src: url("../../fonts/montserrat-medium.woff2") format("woff2"), url("../../fonts/montserrat-medium.woff") format("woff");
+  src: url("../fonts/montserrat-medium.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -412,7 +412,7 @@ template {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  src: url("../../fonts/montserrat-semibold.woff2") format("woff2"), url("../../fonts/montserrat-semibold.woff") format("woff");
+  src: url("../fonts/montserrat-semibold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -677,11 +677,16 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  text-align: center;
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn:disabled {
@@ -701,15 +706,13 @@ button,
   left: 0;
 }
 
-.page-header::after {
-  content: "";
+.page-header.is-open::before {
   position: absolute;
-  z-index: -100;
-  top: 0;
-  right: 0;
+  content: "";
   width: 100%;
-  height: 100%;
-  background-color: #011c40;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 43, 102, 0.5);
 }
 
 .main-navigation {
@@ -725,6 +728,13 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 108px;
+}
+
+.is-open .main-navigation {
+  width: 89%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .main-navigation__logo-link {
@@ -750,9 +760,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -762,6 +769,11 @@ button,
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.site-list--footer {
+  -ms-flex-preferred-size: 700px;
+  flex-basis: 700px;
 }
 
 .site-list__link {
@@ -822,6 +834,8 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: 22% 72%;
+  object-position: 22% 72%;
 }
 
 .promo {
@@ -830,20 +844,17 @@ button,
 }
 
 .promo-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 92px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(auto, 560px);
+  grid-template-columns: 1fr minmax(auto, 560px);
+  gap: 20px 65px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .promo__content-wrapper {
-  width: 46%;
   padding-left: 6px;
 }
 
@@ -861,14 +872,27 @@ button,
 }
 
 .promo img {
-  width: 560px;
-  height: 301px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .advantages {
   position: relative;
   padding-top: 112px;
   padding-bottom: 120px;
+}
+
+.advantages::before {
+  position: absolute;
+  z-index: -10;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e6f7fe;
 }
 
 .advantages h2 {
@@ -895,7 +919,7 @@ button,
 .advantages p {
   margin: 0;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 20px;
 }
 
 .advantages__list {
@@ -915,7 +939,7 @@ button,
 }
 
 .advantages svg {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .advantages img {
@@ -978,14 +1002,12 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  min-height: 386px;
+  max-height: 386px;
   background-color: #011c40;
   padding-top: 28px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 35px;
-  width: 100%;
-  height: 100%;
 }
 
 .card img {
@@ -997,17 +1019,19 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
   opacity: 1;
 }
 
 .card__image-wrapper::before {
-  position: absolute;
   content: "";
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background-color: #011c40;
+  position: absolute;
 }
 
 .card h4 {
@@ -1026,6 +1050,9 @@ button,
   margin: 0;
   margin-bottom: 5px;
   color: #f9fbfd;
+  overflow-y: auto;
+  overflow: overlay;
+  scrollbar-width: thin;
 }
 
 .card__image-wrapper h4 {
@@ -1045,6 +1072,11 @@ button,
 }
 
 .card:hover .card__link {
+  position: relative;
+  z-index: 5;
+}
+
+.card:hover .card__content-wrapper {
   position: relative;
   z-index: 5;
 }
@@ -1178,9 +1210,10 @@ button,
 .booking-form label {
   width: 100%;
   position: relative;
+  cursor: pointer;
 }
 
-.booking-form input:hover {
+.booking-form input:hover:not(:focus-visible) {
   opacity: 0.6;
 }
 
@@ -1279,6 +1312,7 @@ button,
   width: 18px;
   height: 18px;
   background-color: #f9fbfd;
+  cursor: pointer;
 }
 
 .booking-form__checkbox-wrapper input::after {
@@ -1419,6 +1453,9 @@ button,
   flex-basis: content;
   gap: 10px;
   color: #011c40;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .contacts__link.focus-visible:focus {
@@ -1551,6 +1588,11 @@ button,
     padding-right: 5px;
   }
 
+  .site-list--footer {
+    -ms-flex-preferred-size: 457px;
+    flex-basis: 457px;
+  }
+
   .site-list__link {
     font-size: 14px;
     line-height: 17px;
@@ -1583,17 +1625,9 @@ button,
   }
 
   .promo-wrapper {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    gap: 36px;
-  }
-
-  .promo__content-wrapper {
-    width: 47%;
+    -ms-grid-columns: 1fr minmax(auto, 324px);
+    grid-template-columns: 1fr minmax(auto, 324px);
+    gap: 30px;
   }
 
   .promo h2 {
@@ -1603,15 +1637,13 @@ button,
     line-height: 36px;
   }
 
-  .promo img {
+  .promo__image-wrapper {
     padding-top: 8px;
-    width: 324px;
-    height: 174px;
   }
 
   .advantages {
     padding-top: 89px;
-    padding-bottom: 104px;
+    padding-bottom: 101px;
   }
 
   .advantages h2 {
@@ -1622,7 +1654,7 @@ button,
   .advantages h3 {
     font-size: 18px;
     line-height: 25px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 
   .advantages br {
@@ -1630,16 +1662,21 @@ button,
   }
 
   .advantages__list {
-    gap: 30px;
+    gap: 37px;
     padding-left: 15px;
+    padding-right: 15px;
   }
 
   .advantages__item {
-    padding: 26px 24px 25px 13px;
+    padding: 26px 9px 18px 13px;
   }
 
   .advantages .advantages__item--margin h3 {
     margin-bottom: 15px;
+  }
+
+  .advantages svg {
+    margin-bottom: 12px;
   }
 
   .catalog {
@@ -1664,6 +1701,7 @@ button,
 
   .card {
     min-width: 308px;
+    aspect-ratio: 0.8/1;
   }
 
   .card__content-wrapper {
@@ -1794,6 +1832,8 @@ button,
 
   .social-list {
     gap: 12px;
+    -ms-flex-preferred-size: 100px;
+    flex-basis: 100px;
   }
 }
 
@@ -1948,6 +1988,8 @@ button,
     -webkit-box-align: self-start;
     -ms-flex-align: self-start;
     align-items: self-start;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
     gap: 8px;
   }
 
@@ -1971,21 +2013,15 @@ button,
   .promo {
     padding-top: 56px;
     padding-bottom: 92px;
+    background-color: #e2eaf7;
   }
 
   .promo-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 32px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .promo__content-wrapper {
-    width: 100%;
     padding-left: 0;
   }
 
@@ -1993,11 +2029,6 @@ button,
     font-size: 24px;
     line-height: 34px;
     padding-right: 12px;
-  }
-
-  .promo img {
-    width: 290px;
-    height: 156px;
   }
 
   .advantages {
@@ -2020,6 +2051,12 @@ button,
     grid-template-columns: 1fr;
     gap: 28px;
     padding-left: 5px;
+    padding-right: 0;
+  }
+
+  .advantages__item {
+    padding-left: 24px;
+    padding-bottom: 25px;
   }
 
   .advantages .advantages__item--margin h3 {
@@ -2042,16 +2079,13 @@ button,
   .catalog__list {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     row-gap: 30px;
     padding: 0;
   }
 
   .card {
     min-width: 270px;
-    max-width: 380px;
+    aspect-ratio: 0.7/1;
   }
 
   .card__content-wrapper {
@@ -2212,6 +2246,13 @@ button,
 @media (max-width: 340px) {
   .booking-form__checkbox-wrapper br {
     display: block;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .card h4 {
+    font-size: 25px;
+    line-height: 32px;
   }
 }
 

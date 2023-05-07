@@ -96,6 +96,7 @@
   flex-basis: content;
   gap: 10px;
   color: $color-dark-blue;
+  width: fit-content;
 
   @include hover-focus {
     outline: none;

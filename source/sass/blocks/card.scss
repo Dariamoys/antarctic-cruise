@@ -9,11 +9,12 @@
 
   @include vp-1023 {
     min-width: 308px;
+    aspect-ratio: 0.8/1;
   }
 
   @include vp-767 {
     min-width: 270px;
-    max-width: 380px;
+    aspect-ratio: 0.7/1;
   }
 }
 
@@ -21,14 +22,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 386px;
+  max-height: 386px;
   background-color: $color-dark-blue;
   padding-top: 28px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 35px;
-  width: 100%;
-  height: 100%;
 
   @include vp-1023 {
     padding: 35px;
@@ -48,6 +47,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
   opacity: 1;
 }
 
@@ -68,6 +68,11 @@
   font-size: 18px;
   line-height: 27px;
   color: $color-white;
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    font-size: 25px;
+    line-height: 32px;
+  }
 }
 
 .card__info-list {
@@ -75,6 +80,9 @@
   margin: 0;
   margin-bottom: 5px;
   color: $color-white;
+  overflow-y: auto;
+  overflow: overlay;
+  scrollbar-width: thin;
 }
 
 .card__image-wrapper h4 {
@@ -104,6 +112,11 @@
 }
 
 .card:hover .card__link {
+  position: relative;
+  z-index: 5;
+}
+
+.card:hover .card__content-wrapper {
   position: relative;
   z-index: 5;
 }

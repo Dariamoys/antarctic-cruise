@@ -1,6 +1,5 @@
 .site-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 22px;
   flex-wrap: wrap;
@@ -15,9 +14,16 @@
 }
 
 .site-list--footer {
+  flex-basis: 700px;
+
+  @include vp-1023 {
+    flex-basis: 457px;
+  }
+
   @include vp-767 {
     flex-direction: column;
     align-items: self-start;
+    flex-basis: auto;
     gap: 8px;
   }
 }

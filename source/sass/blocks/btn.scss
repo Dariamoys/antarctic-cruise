@@ -9,9 +9,11 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  text-align: center;
   border: none;
   cursor: pointer;
   transition: opacity $trans-default;
+  user-select: none;
 
   &:disabled {
     opacity: 0.5;

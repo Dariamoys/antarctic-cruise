@@ -15,6 +15,13 @@
   }
 }
 
+.is-open .main-navigation {
+  width: 89%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .main-navigation__logo-link {
   margin-right: 20px;
 

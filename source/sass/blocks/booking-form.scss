@@ -63,9 +63,10 @@
 .booking-form label {
   width: 100%;
   position: relative;
+  cursor: pointer;
 }
 
-.booking-form input:hover {
+.booking-form input:hover:not(:focus-visible) {
   opacity: 0.6;
 }
 
@@ -142,6 +143,7 @@
   width: 18px;
   height: 18px;
   background-color: $color-white;
+  cursor: pointer;
 
   @include vp-767 {
     width: 20px;

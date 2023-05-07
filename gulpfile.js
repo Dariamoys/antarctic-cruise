@@ -5,6 +5,7 @@ import styles from './gulp/compileStyles.mjs';
 import { copy, copyImages, copySvg } from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
 import {optimizeSvg, sprite, createWebp, optimizePng, optimizeJpg} from './gulp/optimizeImages.mjs';
+import ghPages from 'github-pages';
 
 const server = browserSync.create();
 const streamStyles = () => styles().pipe(server.stream());
@@ -42,5 +43,9 @@ const refresh = (done) => {
 const build = gulp.series(clean, copy, sprite, gulp.parallel(styles, js, optimizePng, optimizeJpg, optimizeSvg));
 const dev = gulp.series(clean, copy, sprite, gulp.parallel(styles, js, optimizePng, optimizeJpg, optimizeSvg), syncServer);
 const start = gulp.series(clean, copy, sprite, gulp.parallel(styles, js), syncServer);
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*').pipe(ghPages());
+});
 
 export { createWebp as webp, build, start, dev};

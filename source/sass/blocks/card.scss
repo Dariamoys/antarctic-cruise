@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-height: 386px;
+  height: 100%;
   background-color: $color-dark-blue;
   padding-top: 28px;
   padding-left: 25px;
@@ -39,11 +39,17 @@
   }
 }
 
-.card img {
+.card__image-wrapper {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -78,11 +84,15 @@
 .card__info-list {
   flex-grow: 1;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   color: $color-white;
   overflow-y: auto;
   overflow: overlay;
   scrollbar-width: thin;
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
 }
 
 .card__image-wrapper h4 {

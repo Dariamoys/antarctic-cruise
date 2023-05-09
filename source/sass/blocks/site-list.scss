@@ -11,6 +11,10 @@
     gap: 14px;
     padding-right: 5px;
   }
+
+  @include vp-767 {
+    margin-left: -8px;
+  }
 }
 
 .site-list--footer {
@@ -53,5 +57,9 @@
   @include vp-1023 {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  @include vp-767 {
+    padding: 0;
   }
 }

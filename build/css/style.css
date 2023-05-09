@@ -732,7 +732,6 @@ button,
 
 .is-open .main-navigation {
   width: 89%;
-  height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -855,6 +854,9 @@ button,
 }
 
 .promo__content-wrapper {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   padding-left: 6px;
 }
 
@@ -938,16 +940,21 @@ button,
   padding: 30px 30px 50px 30px;
 }
 
-.advantages svg {
+.advantages__icon {
   margin-bottom: 10px;
 }
 
-.advantages img {
+.advantages__image-wrapper {
   position: absolute;
   content: "";
   z-index: -10;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.advantages img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -956,7 +963,7 @@ button,
 
 .catalog {
   padding-top: 82px;
-  padding-bottom: 120px;
+  padding-bottom: 119px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1002,7 +1009,7 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  max-height: 386px;
+  height: 100%;
   background-color: #011c40;
   padding-top: 28px;
   padding-left: 25px;
@@ -1010,11 +1017,17 @@ button,
   padding-bottom: 35px;
 }
 
-.card img {
+.card__image-wrapper {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1048,7 +1061,7 @@ button,
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   color: #f9fbfd;
   overflow-y: auto;
   overflow: overlay;
@@ -1479,6 +1492,11 @@ button,
   height: 306px;
 }
 
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .map img {
   position: absolute;
   content: "";
@@ -1543,11 +1561,6 @@ button,
 .social-list__link:focus-visible {
   border: none;
   outline: 2px solid #f9fbfd;
-}
-
-.social-list__icon--reddit {
-  width: 10px;
-  height: 16px;
 }
 
 .intro a {
@@ -1627,7 +1640,12 @@ button,
   .promo-wrapper {
     -ms-grid-columns: 1fr minmax(auto, 324px);
     grid-template-columns: 1fr minmax(auto, 324px);
-    gap: 30px;
+    gap: 43px;
+  }
+
+  .promo__image-wrapper {
+    padding-right: 10px;
+    padding-top: 8px;
   }
 
   .promo h2 {
@@ -1637,13 +1655,9 @@ button,
     line-height: 36px;
   }
 
-  .promo__image-wrapper {
-    padding-top: 8px;
-  }
-
   .advantages {
     padding-top: 89px;
-    padding-bottom: 101px;
+    padding-bottom: 105px;
   }
 
   .advantages h2 {
@@ -1675,8 +1689,23 @@ button,
     margin-bottom: 15px;
   }
 
-  .advantages svg {
+  .advantages__icon {
     margin-bottom: 12px;
+  }
+
+  .advantages__icon--cruise-ship {
+    width: 21px;
+    height: 26px;
+  }
+
+  .advantages__icon--tick {
+    width: 27px;
+    height: 26px;
+  }
+
+  .advantages__icon--speedboat {
+    width: 36px;
+    height: 26px;
   }
 
   .catalog {
@@ -1696,7 +1725,7 @@ button,
     -webkit-column-gap: 32px;
     -moz-column-gap: 32px;
     column-gap: 32px;
-    row-gap: 29px;
+    row-gap: 30px;
   }
 
   .card {
@@ -1784,7 +1813,7 @@ button,
 
   .contacts {
     padding-top: 105px;
-    padding-bottom: 87px;
+    padding-bottom: 116px;
   }
 
   .contacts__wrapper {
@@ -1819,8 +1848,12 @@ button,
     height: 315px;
   }
 
+  .page-footer {
+    padding-top: 48px;
+  }
+
   .page-footer__wrapper {
-    gap: 27px;
+    gap: 20px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1834,6 +1867,21 @@ button,
     gap: 12px;
     -ms-flex-preferred-size: 100px;
     flex-basis: 100px;
+  }
+
+  .social-list__icon--ok {
+    width: 10px;
+    height: 16px;
+  }
+
+  .social-list__icon--dzen {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social-list__icon--reddit {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -1980,6 +2028,10 @@ button,
     height: 22px;
   }
 
+  .site-list {
+    margin-left: -8px;
+  }
+
   .site-list--footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1991,6 +2043,10 @@ button,
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
     gap: 8px;
+  }
+
+  .site-list__link--footer {
+    padding: 0;
   }
 
   .hero__content-wrapper {
@@ -2012,7 +2068,7 @@ button,
 
   .promo {
     padding-top: 56px;
-    padding-bottom: 92px;
+    padding-bottom: 83px;
     background-color: #e2eaf7;
   }
 
@@ -2025,7 +2081,12 @@ button,
     padding-left: 0;
   }
 
+  .promo__image-wrapper {
+    padding: 0;
+  }
+
   .promo h2 {
+    margin-bottom: 16px;
     font-size: 24px;
     line-height: 34px;
     padding-right: 12px;
@@ -2037,7 +2098,7 @@ button,
   }
 
   .advantages h2 {
-    margin-bottom: 27px;
+    margin-bottom: 33px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2055,8 +2116,9 @@ button,
   }
 
   .advantages__item {
-    padding-left: 24px;
-    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-bottom: 23px;
+    padding-right: 23px;
   }
 
   .advantages .advantages__item--margin h3 {
@@ -2092,6 +2154,10 @@ button,
     padding: 31px 25px;
   }
 
+  .card__info-list {
+    margin-bottom: 26px;
+  }
+
   .card__image-wrapper h4 {
     left: 24px;
     bottom: 7px;
@@ -2100,11 +2166,11 @@ button,
   .booking {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 55px;
+    padding-bottom: 66px;
   }
 
   .booking__wrapper {
-    gap: 29px;
+    gap: 31px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -2149,6 +2215,10 @@ button,
 
   .booking-form__input-wrapper {
     margin-bottom: 20px;
+  }
+
+  .booking-form__checkbox-wrapper {
+    gap: 9px;
   }
 
   .booking-form__checkbox-wrapper input {
@@ -2205,6 +2275,7 @@ button,
 
   .page-footer {
     padding-top: 40px;
+    padding-bottom: 34px;
   }
 
   .page-footer__wrapper {
@@ -2224,9 +2295,10 @@ button,
     padding-left: 0;
   }
 
-  .social-list__icon {
-    width: 15px;
-    height: 16px;
+  .social-list {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    margin-left: -8px;
   }
 }
 
@@ -2240,6 +2312,7 @@ button,
     padding-top: 35px;
     padding-left: 29px;
     padding-right: 29px;
+    padding-bottom: 39px;
   }
 }
 

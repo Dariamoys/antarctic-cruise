@@ -1,6 +1,6 @@
 .catalog {
   padding-top: 82px;
-  padding-bottom: 120px;
+  padding-bottom: 119px;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -55,7 +55,7 @@
     grid-template-columns: repeat(2, 1fr);
     padding-right: 10px;
     column-gap: 32px;
-    row-gap: 29px;
+    row-gap: 30px;
   }
 
   @include vp-767 {

@@ -45,7 +45,8 @@ const dev = gulp.series(clean, copy, sprite, gulp.parallel(styles, js, optimizeP
 const start = gulp.series(clean, copy, sprite, gulp.parallel(styles, js), syncServer);
 
 gulp.task('deploy', function() {
-  return gulp.src('./build/**/*').pipe(ghPages());
+  return gulp.src('./build/**/*')
+  .pipe(ghPages());
 });
 
 export { createWebp as webp, build, start, dev};

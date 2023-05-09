@@ -21,7 +21,7 @@
   <div class="wrapper">
     <header class="page-header page-header--nojs" data-header data-close-menu>
       <div class="container">
-        <div class="header-example__overlay" data-close-menu></div>
+        <div class="page-header__overlay" data-close-menu></div>
         <nav class="page-header__navigation main-navigation" data-close-menu>
           <div class="main-navigation__wrapper">
             <a class="main-navigation__logo-link" href="index.html" aria-label="Главная страница">
@@ -100,7 +100,8 @@
           <h2>Преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <svg viewBox="0 0 27 32" aria-hidden="true" width="27" height="32">
+              <svg class="advantages__icon advantages__icon--cruise-ship" viewBox="0 0 27 32" aria-hidden="true"
+                width="27" height="32">
                 <use xlink:href="img/sprite.svg#cruise-ship"></use>
               </svg>
               <h3>Небольшой круизный лайнер</h3>
@@ -108,7 +109,8 @@
                 и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
             </li>
             <li class="advantages__item">
-              <svg viewBox="0 0 38 32" aria-hidden="true" width="38" height="32">
+              <svg class="advantages__icon advantages__icon--tick" viewBox="0 0 38 32" aria-hidden="true" width="38"
+                height="32">
                 <use xlink:href="img/sprite.svg#tick"></use>
               </svg>
               <h3>Система <br> все включено</h3>
@@ -116,7 +118,8 @@
                 и&nbsp;безлимитный бар доступны для вас 24 часа.</p>
             </li>
             <li class="advantages__item advantages__item--margin">
-              <svg viewBox="0 0 44 32" aria-hidden="true" width="44" height="32">
+              <svg class="advantages__icon advantages__icon--speedboat" viewBox="0 0 44 32" aria-hidden="true"
+                width="44" height="32">
                 <use xlink:href="img/sprite.svg#speedboat"></use>
               </svg>
               <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
@@ -440,6 +443,10 @@
                 <img src="img/images/desktop/map-desktop.jpg" srcset="img/images/retina/map-desktop@2x.jpg"
                   alt="Карта с отметкой адреса компании." width="560" height="306" loading="lazy">
               </picture>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197964!2d30.320472477005453!3d59.938719162093925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1681471892734!5m2!1sru!2sus"
+                style="border: 0;" allowfullscreen="" loading="lazy" title="Наше расположение на карте."
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contacts__text-content">
               <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все
@@ -489,8 +496,8 @@
             <li class="social-list__item">
               <a class="social-list__link social-list__link--ok" href="#" target="_blank"
                 aria-label="Перейти на нашу страницу в Одноклассниках">
-                <svg class="social-list__icon" width="12" height="20" viewBox="0 0 12 20" aria-hidden="true"
-                  focusable="false">
+                <svg class="social-list__icon social-list__icon--ok" width="12" height="20" viewBox="0 0 12 20"
+                  aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#ok"></use>
                 </svg>
               </a>
@@ -498,17 +505,17 @@
             <li class="social-list__item">
               <a class="social-list__link social-list__link--dzen" href="#" target="_blank"
                 aria-label="Перейти на нашу страницу Вконтакте">
-                <svg class="social-list__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"
-                  focusable="false">
+                <svg class="social-list__icon social-list__icon--dzen" width="20" height="20" viewBox="0 0 20 20"
+                  aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#dzen"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link social-list__link--reddit" href="#" target="_blank"
-                aria-label="Перейти на нашу страницу в Пинтерест">
-                <svg class="social-list__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"
-                  focusable="false">
+                aria-label="Перейти на нашу страницу в Реддит">
+                <svg class="social-list__icon social-list__icon--reddit" width="20" height="20" viewBox="0 0 20 20"
+                  aria-hidden="true" focusable="false">
                   <use xlink:href="img/sprite.svg#reddit"></use>
                 </svg>
               </a>
@@ -518,7 +525,6 @@
       </div>
     </footer>
   </div>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=%3C1cc2cab0-bb47-4a0c-8a7e-befab8a7ee45%3E&lang=ru_RU"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

@@ -848,9 +848,6 @@ button,
   -ms-grid-columns: 1fr minmax(auto, 560px);
   grid-template-columns: 1fr minmax(auto, 560px);
   gap: 20px 65px;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
 }
 
 .promo__content-wrapper {
@@ -858,6 +855,12 @@ button,
   -ms-grid-row-align: center;
   align-self: center;
   padding-left: 6px;
+}
+
+.promo__image-wrapper {
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
 }
 
 .promo h2 {

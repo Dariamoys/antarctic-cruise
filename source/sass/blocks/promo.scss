@@ -32,6 +32,11 @@
 .promo__content-wrapper {
   align-self: center;
   padding-left: 6px;
+  margin-left: -5px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
 
   @include vp-767 {
     padding-left: 0;
@@ -40,6 +45,7 @@
 
 .promo__image-wrapper {
   align-self: start;
+
   @include vp-1023 {
     padding-right: 10px;
     padding-top: 8px;

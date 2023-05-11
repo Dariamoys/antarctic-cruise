@@ -2,6 +2,7 @@
   position: relative;
   min-height: 386px;
   max-width: 260px;
+  aspect-ratio: 0.7/1;
 
   @include vp-1279 {
     max-width: 100%;

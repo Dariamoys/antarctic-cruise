@@ -4,21 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 108px;
+  min-height: 98px;
+  padding-top: 15px;
 
   @include vp-1023 {
-    min-height: 80px;
+    min-height: 69px;
   }
 
   @include vp-767 {
-    min-height: 71px;
+    min-height: 55px;
   }
-}
-
-.is-open .main-navigation {
-  width: 89%;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .main-navigation__logo-link {
@@ -64,17 +59,27 @@
   @include vp-767 {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 6px;
     width: 24px;
     height: 2px;
     background-color: $color-white;
-    box-shadow: 0 4px 0 0 $color-white, 0 8px 0 0 $color-white;
+    box-shadow: 0 6px 0 0 $color-white, 0 12px 0 0 $color-white;
   }
 }
 
 .main-navigation__list {
   @include vp-767 {
     display: none;
+  }
+}
+
+.is-open .main-navigation {
+  @include vp-767 {
+    width: 89%;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

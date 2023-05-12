@@ -727,13 +727,8 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 108px;
-}
-
-.is-open .main-navigation {
-  width: 89%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  min-height: 98px;
+  padding-top: 15px;
 }
 
 .main-navigation__logo-link {
@@ -803,7 +798,7 @@ button,
 .hero__content-wrapper {
   padding-top: 271px;
   padding-bottom: 285px;
-  padding-left: 102px;
+  padding-left: 96px;
 }
 
 .hero h1 {
@@ -855,6 +850,7 @@ button,
   -ms-grid-row-align: center;
   align-self: center;
   padding-left: 6px;
+  margin-left: -5px;
 }
 
 .promo__image-wrapper {
@@ -999,6 +995,7 @@ button,
   position: relative;
   min-height: 386px;
   max-width: 260px;
+  aspect-ratio: 0.7/1;
 }
 
 .card__content-wrapper {
@@ -1512,7 +1509,7 @@ button,
 
 .page-footer {
   padding-top: 50px;
-  padding-bottom: 46px;
+  padding-bottom: 44px;
   background-color: #011c40;
 }
 
@@ -1587,7 +1584,7 @@ button,
   }
 
   .main-navigation {
-    min-height: 80px;
+    min-height: 69px;
   }
 
   .main-navigation__wrapper {
@@ -1644,6 +1641,10 @@ button,
     -ms-grid-columns: 1fr minmax(auto, 324px);
     grid-template-columns: 1fr minmax(auto, 324px);
     gap: 43px;
+  }
+
+  .promo__content-wrapper {
+    margin-left: 0;
   }
 
   .promo__image-wrapper {
@@ -1907,7 +1908,7 @@ button,
     padding-top: 17px;
     padding-bottom: 211px;
     padding-right: 6px;
-    padding-left: 15px;
+    padding-left: 19px;
   }
 
   .page-header.is-open .main-navigation__logo-link,
@@ -1987,7 +1988,7 @@ button,
   }
 
   .main-navigation {
-    min-height: 71px;
+    min-height: 55px;
   }
 
   .main-navigation__wrapper {
@@ -2013,26 +2014,32 @@ button,
   .main-navigation__toggle::before {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 6px;
     width: 24px;
     height: 2px;
     background-color: #f9fbfd;
-    -webkit-box-shadow: 0 4px 0 0 #f9fbfd, 0 8px 0 0 #f9fbfd;
-    box-shadow: 0 4px 0 0 #f9fbfd, 0 8px 0 0 #f9fbfd;
+    -webkit-box-shadow: 0 6px 0 0 #f9fbfd, 0 12px 0 0 #f9fbfd;
+    box-shadow: 0 6px 0 0 #f9fbfd, 0 12px 0 0 #f9fbfd;
   }
 
   .main-navigation__list {
     display: none;
   }
 
+  .is-open .main-navigation {
+    width: 89%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .logo {
     width: 42px;
     height: 22px;
-  }
-
-  .site-list {
-    margin-left: -8px;
   }
 
   .site-list--footer {
